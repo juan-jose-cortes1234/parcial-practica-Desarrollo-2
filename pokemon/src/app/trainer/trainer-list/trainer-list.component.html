@@ -1,11 +1,29 @@
-<div>
-  <div>
-    <div *ngIf="selected">
+
+  <div class="container pt-5">
+    <!-- <div *ngIf="selected">
       <app-trainer-detail
         [trainerDetail]="selectedTrainer"
       ></app-trainer-detail>
+    </div> -->
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4 px-4 pb-2 pt-2" *ngFor="let t of trainers">
+        <div class="card" (click)="onSelected(t)">
+          <div class="card-body">
+            <div class="row">
+              <img
+              [src]="t.imageUrl"
+              alt="Trainer's Image"
+              class="img-thumbnail"
+            />
+            <h5 class="card-title">{{ t.name }}</h5>
+            <p class="card-text">{{ t.smallSnopsies }}</p>
+          </div>
+
+           
+        </div>
+      </div>
     </div>
-    <table>
+    <!-- <table>
       <thead>
         <tr>
           <th class="h4">Trainers's Name</th>
@@ -34,6 +52,6 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </div>
-</div>
+

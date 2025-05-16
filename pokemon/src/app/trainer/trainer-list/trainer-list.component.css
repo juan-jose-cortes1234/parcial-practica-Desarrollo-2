@@ -6,3 +6,10 @@ tr:hover {
 thead {
   background-color: gold;
 }
+.insideCard
+{
+  display: inline-block;
+}
+card{
+  width: 40%;
+}
